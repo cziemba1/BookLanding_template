@@ -1,4 +1,65 @@
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, small, strike, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+big,
+em,
+img,
+s,
+small,
+strike,
+strong,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,29 +71,27 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   --main-text: black;
-  --secondary-text: rgb(163, 163, 163);
+  --secondary-text: #a3a3a3;
   --main-bg: #ffccd2;
 }
 
 body {
   background-color: whitesmoke;
+  overflow-x: hidden;
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background-color: whitesmoke;
+  position: relative;
 }
 
 nav img {
   position: relative;
   width: 3rem;
   left: 80%;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
 }
 
 nav #menu {
@@ -43,18 +102,10 @@ nav #menu {
   top: 0;
   left: -15rem;
   z-index: 20;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-transition: all .7s ease-in-out;
-  transition: all .7s ease-in-out;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: all 0.7s ease-in-out;
 }
 
 nav #menu .menu-close {
@@ -63,10 +114,8 @@ nav #menu .menu-close {
   height: 3.5rem;
   top: 0rem;
   left: 15rem;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -76,14 +125,12 @@ nav #menu .menu-close span {
   height: 1.5px;
   width: 50%;
   background: black;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
   margin-top: 1rem;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
 }
 
 nav #menu .menu-close span:nth-child(1) {
@@ -106,13 +153,11 @@ nav #menu .menu-close.open span:nth-child(1) {
 }
 
 nav #menu .menu-close.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 nav #menu .menu-close.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 nav #menu .menu-close.open span:nth-child(4) {
@@ -122,13 +167,8 @@ nav #menu .menu-close.open span:nth-child(4) {
 }
 
 nav #menu .menu-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   text-align: center;
 }
@@ -138,9 +178,9 @@ nav #menu .menu-items ul li {
 }
 
 nav #menu .menu-items ul li a {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  padding: .5rem;
+  padding: 0.5rem;
   color: black;
   position: relative;
   width: 100%;
@@ -152,17 +192,15 @@ nav #menu .menu-items ul li a:hover {
 }
 
 nav #menu .menu-items ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(380%);
-          transform: translateY(380%);
+  transform: translateY(380%);
   width: 0;
   left: 0;
-  height: .1rem;
-  margin-top: .3rem;
+  height: 0.1rem;
+  margin-top: 0.3rem;
   background: currentColor;
-  -webkit-transition: width 0.3s ease-in;
   transition: width 0.3s ease-in;
 }
 
@@ -171,12 +209,8 @@ nav #menu .menu-items ul li a:hover::after {
 }
 
 nav #menu .menu-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 nav #menu .menu-social a {
@@ -195,16 +229,9 @@ nav #menu.open {
 
 #landing {
   padding: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 7rem;
   background-color: whitesmoke;
 }
@@ -213,7 +240,7 @@ nav #menu.open {
   color: var(--main-bg);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -235,29 +262,25 @@ nav #menu.open {
 
 #landing ul li {
   margin-top: 1rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
   z-index: 2;
 }
 
 #landing ul li i {
   color: var(--main-bg);
-  margin: .5rem;
+  margin: 0.5rem;
   z-index: 2;
 }
 
 #landing div {
   margin-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 #landing div a {
-  font-size: .7rem;
-  padding: .7rem;
+  font-size: 0.7rem;
+  padding: 0.7rem;
   background-color: var(--main-bg);
   color: black;
   text-decoration: none;
@@ -271,23 +294,16 @@ nav #menu.open {
 }
 
 #landing img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 60%;
-  -webkit-box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-          box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
   margin: 2rem 0;
 }
 
 #book-info-landing {
   padding: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-top: 5rem;
   background-color: white;
 }
@@ -302,23 +318,18 @@ nav #menu.open {
 #book-info-landing .book-info-category div {
   margin-bottom: 1.5rem;
   padding: 1.3rem;
-  -webkit-box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-          box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-  -webkit-transition: -webkit-box-shadow 0.7s ease-in-out;
-  transition: -webkit-box-shadow 0.7s ease-in-out;
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
   transition: box-shadow 0.7s ease-in-out;
-  transition: box-shadow 0.7s ease-in-out, -webkit-box-shadow 0.7s ease-in-out;
 }
 
 #book-info-landing .book-info-category div:hover {
-  -webkit-box-shadow: inset 0 0 3px rgba(55, 84, 170, 0), inset 0 0 3px rgba(255, 255, 255, 0), 3px 3px 3px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-          box-shadow: inset 0 0 3px rgba(55, 84, 170, 0), inset 0 0 3px rgba(255, 255, 255, 0), 3px 3px 3px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 3px rgba(55, 84, 170, 0), inset 0 0 3px rgba(255, 255, 255, 0), 3px 3px 3px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
 }
 
 #book-info-landing .book-info-category div i {
   color: var(--main-bg);
   font-size: 1.6rem;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 #book-info-landing .book-info-category div h3 {
@@ -326,7 +337,7 @@ nav #menu.open {
 }
 
 #book-info-landing .book-info-category div p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .testimonio {
@@ -346,37 +357,32 @@ nav #menu.open {
   background-color: white !important;
   display: block;
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .glider figure blockquote {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .glider figure figcaption {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .glider figure figcaption img {
   width: 30%;
   border-radius: 50%;
-  padding: .5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding: 0.5rem;
+  object-fit: cover;
 }
 
 .glider figure figcaption h1 {
-  font-size: .7rem;
+  font-size: 0.7rem;
   line-height: 1rem;
 }
 
 .glider figure figcaption h1 span {
-  font-size: .6rem;
+  font-size: 0.6rem;
   font-weight: 200;
 }
 
@@ -398,23 +404,16 @@ nav #menu.open {
 
 #info-about-author {
   margin-top: 6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
   background-color: whitesmoke;
 }
 
 #info-about-author img {
   border-radius: 50%;
-  width: 30%;
+  width: 15%;
   margin-top: 2rem;
 }
 
@@ -433,14 +432,14 @@ nav #menu.open {
 
 #info-about-author p {
   margin: 1rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 200;
   line-height: 1.2rem;
 }
 
 #info-about-author a {
   font-size: 1rem;
-  padding: .7rem;
+  padding: 0.7rem;
   background-color: var(--main-bg);
   color: black;
   text-decoration: none;
@@ -455,16 +454,9 @@ nav #menu.open {
 }
 
 #faqs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--main-bg);
   padding-bottom: 3rem;
 }
@@ -487,31 +479,21 @@ nav #menu.open {
 }
 
 #faqs div p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: palevioletred;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0;
+  height: 10rem;
 }
 
 .footer .menu-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 2rem;
 }
 
@@ -522,25 +504,18 @@ nav #menu.open {
 }
 
 .footer p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 770px) {
   nav img {
     left: 90%;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
   }
   #landing {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     padding-left: 3rem;
   }
   #landing h1 {
@@ -559,64 +534,49 @@ nav #menu.open {
   }
   #landing ul li {
     margin-top: 1rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
     z-index: 2;
   }
   #landing ul li i {
     color: var(--main-bg);
-    margin: .5rem;
+    margin: 0.5rem;
     z-index: 2;
   }
   #landing div {
     margin-top: 4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: 100%;
   }
   #landing div a {
     font-size: 1rem;
-    padding: .7rem;
+    padding: 0.7rem;
     margin: 0 1rem;
   }
   #landing img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 19rem;
     position: absolute;
-    opacity: .9;
+    opacity: 0.9;
     left: 55%;
     top: 19rem;
   }
   #book-info-landing {
     padding: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   #book-info-landing h1 {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
     font-size: 1.5rem;
   }
   #book-info-landing .book-info-category {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   #book-info-landing .book-info-category div {
     margin-bottom: 1.5rem;
-    margin: .8rem;
+    margin: 0.8rem;
     width: 14rem;
     border: 0.01rem solid #e6e6e6;
     border-radius: 5%;
@@ -624,13 +584,13 @@ nav #menu.open {
   #book-info-landing .book-info-category div i {
     color: var(--main-bg);
     font-size: 1.6rem;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
   #book-info-landing .book-info-category div h3 {
     font-size: 1.3rem;
   }
   #book-info-landing .book-info-category div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .testimonio {
     font-size: 1.5rem;
@@ -642,18 +602,14 @@ nav #menu.open {
   }
   .glider figure {
     margin: 1rem;
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .glider figure blockquote {
     font-size: 1rem;
   }
   .glider figure figcaption {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .glider figure figcaption img {
     width: 20%;
@@ -663,7 +619,7 @@ nav #menu.open {
     line-height: 1.5rem;
   }
   .glider figure figcaption h1 span {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   #info-about-author {
     margin-top: 6rem;
@@ -687,7 +643,7 @@ nav #menu.open {
   }
   #info-about-author a {
     font-size: 1.3rem;
-    padding: .7rem;
+    padding: 0.7rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
@@ -707,7 +663,7 @@ nav #menu.open {
     margin-bottom: 1rem;
   }
   #faqs div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .footer .menu-social {
     margin-top: 2rem;
@@ -717,7 +673,7 @@ nav #menu.open {
     font-size: 1.8rem;
   }
   .footer p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -725,46 +681,28 @@ nav #menu.open {
   nav #menu {
     position: fixed;
     width: 100%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
     height: max-content;
     background-color: var(--main-bg);
     top: 0;
     left: 0;
     z-index: 20;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
   }
   nav #menu .menu-close {
     display: none;
   }
   nav #menu .menu-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: .3rem;
+    flex-direction: row;
+    padding: 0.3rem;
     text-align: center;
     padding-right: 2rem;
   }
   nav #menu .menu-items ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   nav #menu .menu-items ul li {
     margin-top: 1rem;
@@ -772,8 +710,6 @@ nav #menu.open {
   nav #menu .menu-items ul li a {
     color: black;
     position: block;
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
   nav #menu .menu-social {
@@ -781,21 +717,14 @@ nav #menu.open {
   }
   nav img {
     left: 1%;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     z-index: 30;
     position: fixed;
   }
   #landing {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     padding-left: 3rem;
   }
   #landing h1 {
@@ -812,24 +741,20 @@ nav #menu.open {
     width: 40%;
   }
   #landing ul li {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   #landing ul li i {
-    margin: .5rem;
+    margin: 0.5rem;
   }
   #landing div {
     margin-top: 4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
     width: 100%;
   }
   #landing div a {
     font-size: 1rem;
-    padding: .7rem;
+    padding: 0.7rem;
     margin: 0 1rem;
   }
   #landing img {
@@ -839,17 +764,13 @@ nav #menu.open {
     top: 22rem;
   }
   #book-info-landing {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   #book-info-landing h1 {
     margin-top: 4rem;
   }
   #book-info-landing .book-info-category {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     width: 100%;
   }
   #book-info-landing .book-info-category div {
@@ -857,13 +778,13 @@ nav #menu.open {
   }
   #book-info-landing .book-info-category div i {
     font-size: 1.6rem;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
   #book-info-landing .book-info-category div h3 {
     font-size: 1.3rem;
   }
   #book-info-landing .book-info-category div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .testimonio {
     font-size: 1.5rem;
@@ -883,12 +804,8 @@ nav #menu.open {
     font-size: 1rem;
   }
   .glider figure figcaption {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .glider figure figcaption img {
     width: 20%;
@@ -898,7 +815,7 @@ nav #menu.open {
     line-height: 1.5rem;
   }
   .glider figure figcaption h1 span {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   #info-about-author {
     margin-top: 6rem;
@@ -915,28 +832,21 @@ nav #menu.open {
   }
   #info-about-author a {
     font-size: 1.3rem;
-    padding: .7rem;
+    padding: 0.7rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
   #faqs {
     padding-bottom: 3rem;
     padding: 0 2rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   #faqs h1 {
     font-size: 1.5rem;
     margin-top: 1rem;
-    -webkit-transform: translateY(-13.5rem);
-            transform: translateY(-13.5rem);
+    transform: translateY(-13.5rem);
     position: absolute;
   }
   #faqs div {
@@ -949,7 +859,7 @@ nav #menu.open {
     margin-bottom: 1rem;
   }
   #faqs div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -968,26 +878,23 @@ nav #menu.open {
     line-height: 1rem;
   }
   #landing ul li i {
-    margin: .2rem;
+    margin: 0.2rem;
   }
   #landing img {
     width: 35rem;
     opacity: 1;
     left: 48%;
     top: 12rem;
+    margin-left: 10%;
   }
   #book-info-landing {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   #book-info-landing h1 {
     margin-top: 4rem;
   }
   #book-info-landing .book-info-category {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     width: 100%;
   }
   #book-info-landing .book-info-category div {
@@ -995,13 +902,13 @@ nav #menu.open {
   }
   #book-info-landing .book-info-category div i {
     font-size: 1.6rem;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
   #book-info-landing .book-info-category div h3 {
     font-size: 1.3rem;
   }
   #book-info-landing .book-info-category div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .testimonio {
     font-size: 1.5rem;
@@ -1021,12 +928,8 @@ nav #menu.open {
     font-size: 1rem;
   }
   .glider figure figcaption {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .glider figure figcaption img {
     width: 20%;
@@ -1036,7 +939,7 @@ nav #menu.open {
     line-height: 1.5rem;
   }
   .glider figure figcaption h1 span {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   #info-about-author {
     margin-top: 6rem;
@@ -1053,28 +956,21 @@ nav #menu.open {
   }
   #info-about-author a {
     font-size: 1.3rem;
-    padding: .7rem;
+    padding: 0.7rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
   #faqs {
     padding-bottom: 3rem;
     padding: 0 2rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   #faqs h1 {
     font-size: 1.5rem;
     margin-top: 1rem;
-    -webkit-transform: translateY(-13.5rem);
-            transform: translateY(-13.5rem);
+    transform: translateY(-13.5rem);
     position: absolute;
   }
   #faqs div {
@@ -1087,7 +983,6 @@ nav #menu.open {
     margin-bottom: 1rem;
   }
   #faqs div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
-/*# sourceMappingURL=main.css.map */
